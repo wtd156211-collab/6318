@@ -1,0 +1,44 @@
+walk size=6
+step m1 m1
+set m1 m1 size=6 changed=0 walk=live
+del m9 size=6 changed=0 walk=live
+get m5 = m5
+range [] m2 m4 count=3
+  m2 m2
+  m3 m3
+  m4 m4
+step m2 m2
+set m3 m3x size=6 changed=1 walk=stale
+get m3 = m3x
+range [] m1 m6 count=6
+  m1 m1
+  m2 m2
+  m3 m3x
+  m4 m4
+  m5 m5
+  m6 m6
+error E_ITER_STALE op=set key=m3
+walk size=6
+step m1 m1
+step m2 m2
+del m2 size=5 changed=1 walk=stale
+error E_WALK_OPEN
+error E_ITER_STALE op=del key=m2
+walk size=5
+step m1 m1
+step m3 m3x
+set m0 v0 size=6 changed=1 walk=stale
+error E_ITER_STALE op=set key=m0
+walk size=6
+step m0 v0
+del m0 size=5 changed=1 walk=stale
+set m1 m1z size=5 changed=1 walk=stale
+error E_ITER_STALE op=del key=m0
+walk size=5
+step m1 m1z
+step m3 m3x
+step m4 m4
+step m5 m5
+step m6 m6
+step end
+error E_NO_WALK

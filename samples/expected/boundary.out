@@ -1,0 +1,109 @@
+range [] b000 b000 count=1
+  b000 b000
+range [) b000 b000 count=0
+range (] b000 b000 count=0
+range () b000 b000 count=0
+range [] b000 b003 count=4
+  b000 b000
+  b001 b001
+  b002 b002
+  b003 b003
+range [) b000 b003 count=3
+  b000 b000
+  b001 b001
+  b002 b002
+range (] b000 b003 count=3
+  b001 b001
+  b002 b002
+  b003 b003
+range () b000 b003 count=2
+  b001 b001
+  b002 b002
+range [] b010 b012 count=3
+  b010 b010
+  b011 b011
+  b012 b012
+range [) b010 b012 count=2
+  b010 b010
+  b011 b011
+range (] b010 b012 count=2
+  b011 b011
+  b012 b012
+range () b010 b012 count=1
+  b011 b011
+range [] b030 b020 count=0
+range [) b030 b020 count=0
+range (] b030 b020 count=0
+range () b030 b020 count=0
+range [] b000 b060 count=60
+  b000 b000
+  b001 b001
+  b002 b002
+  b003 b003
+  b004 b004
+  b005 b005
+  b006 b006
+  b007 b007
+  b008 b008
+  b009 b009
+  b010 b010
+  b011 b011
+  b012 b012
+  b013 b013
+  b014 b014
+  b015 b015
+  b016 b016
+  b017 b017
+  b018 b018
+  b019 b019
+  b020 b020
+  b021 b021
+  b022 b022
+  b023 b023
+  b024 b024
+  b025 b025
+  b026 b026
+  b027 b027
+  b028 b028
+  b029 b029
+  b030 b030
+  b031 b031
+  b032 b032
+  b033 b033
+  b034 b034
+  b035 b035
+  b036 b036
+  b037 b037
+  b038 b038
+  b039 b039
+  b040 b040
+  b041 b041
+  b042 b042
+  b043 b043
+  b044 b044
+  b045 b045
+  b046 b046
+  b047 b047
+  b048 b048
+  b049 b049
+  b050 b050
+  b051 b051
+  b052 b052
+  b053 b053
+  b054 b054
+  b055 b055
+  b056 b056
+  b057 b057
+  b058 b058
+  b059 b059
+range [) b059 b000 count=0
+range [] A b000 count=1
+  b000 b000
+range [] b059 z count=1
+  b059 b059
+range [] c z count=0
+walk size=60
+step b000 b000
+step b001 b001
+step b002 b002
+step b003 b003

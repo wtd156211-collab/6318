@@ -1,0 +1,36 @@
+# 遍历中增删改：允许的操作、失效时刻、错误码、失效后重开
+walk
+step
+set m1 m1
+del m9
+get m5
+range [] m2 m4
+step
+set m3 m3x
+get m3
+range [] m1 m6
+step
+walk
+step
+step
+del m2
+walk
+step
+walk
+step
+step
+set m0 v0
+step
+walk
+step
+del m0
+set m1 m1z
+step
+walk
+step
+step
+step
+step
+step
+step
+step

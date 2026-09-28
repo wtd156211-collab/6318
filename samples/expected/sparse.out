@@ -1,0 +1,65 @@
+get Z = Z
+get 阿 = 阿
+get A = -
+range [] Z z count=5
+  Z Z
+  a a
+  m m
+  n n
+  z z
+range [] a zz count=5
+  a a
+  m m
+  n n
+  z z
+  zz zz
+range [) Z 阿 count=7
+  Z Z
+  a a
+  m m
+  n n
+  z z
+  zz zz
+  波 波
+range (] Z 阿 count=7
+  a a
+  m m
+  n n
+  z z
+  zz zz
+  波 波
+  阿 阿
+range [] 阿 波 count=0
+range (] 阿 波 count=0
+range () 阿 波 count=0
+range [] 波 阿 count=2
+  波 波
+  阿 阿
+range [] A Z count=1
+  Z Z
+range [] z 阿 count=4
+  z z
+  zz zz
+  波 波
+  阿 阿
+range [) z zzz count=2
+  z z
+  zz zz
+del n size=7 changed=1 walk=idle
+del n size=7 changed=0 walk=idle
+range [] m 阿 count=5
+  m m
+  z z
+  zz zz
+  波 波
+  阿 阿
+walk size=7
+step Z Z
+step a a
+step m m
+step z z
+step zz zz
+step 波 波
+step 阿 阿
+step end
+error E_NO_WALK

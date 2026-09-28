@@ -1,0 +1,25 @@
+# 规模与耗时门槛（这道题的起始环境没有实现代码，全部从零写）
+
+环境：Windows + Python 3.13，单进程单线程，只用标准库；不联网、不预热。
+跑法（在仓库根目录执行，中间文件放 var/ 或 web/ 由实现自己定）：
+
+  python -m rangemap run  samples/keys/scale-1m.keys  samples/scripts/scale-1m.ops  var/scale-1m.out
+  python -m rangemap run  samples/keys/mutate.keys   samples/scripts/mutate.ops    var/mutate.out
+  python -m rangemap page samples/keys/mutate.keys   samples/scripts/mutate.ops    web/index.html --trace var/mutate.trace.json
+
+判定：每条门槛连续跑 3 次都达标；计时用墙钟，夹住整条命令（含解释器启动、读文件与写输出）。
+
+| 门槛 | 上限 |
+| --- | --- |
+| scale-1m 端到端：读 1 000 000 个键、建索引、跑完 119 条操作、写转录 | 6 s |
+| scale-1m 峰值内存 | 512 MiB |
+| 其余样例每对端到端 | 2 s |
+| page 小样例端到端 | 2 s |
+
+备注：
+
+- scale-1m 的操作里有 100 条落在键空间中部的窄范围查询（各命中 3 键），端到端门槛同时约束建索引与
+  范围查询；从头逐键扫的写法会在这里超时。
+- 命中 1000 键的中部切片（range [) k0500000 k0501000）与百万键首尾的压线查询也都在这个样例里。
+- scale-1m 的转录必须与 samples/expected/scale-1m.out 逐字节相同；两遍跑的转录、页面与 --trace
+  文件也要逐字节相同。

@@ -1,0 +1,28 @@
+# 稀疏键：大小写与汉字的码点序、跨大缝隙、空区间、删除后重查
+get Z
+get 阿
+get A
+range [] Z z
+range [] a zz
+range [) Z 阿
+range (] Z 阿
+range [] 阿 波
+range (] 阿 波
+range () 阿 波
+range [] 波 阿
+range [] A Z
+range [] z 阿
+range [) z zzz
+del n
+del n
+range [] m 阿
+walk
+step
+step
+step
+step
+step
+step
+step
+step
+step

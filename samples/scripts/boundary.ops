@@ -1,0 +1,27 @@
+# 相邻键上的压线：四种开闭、单点区间、空区间、集合外的边界
+range [] b000 b000
+range [) b000 b000
+range (] b000 b000
+range () b000 b000
+range [] b000 b003
+range [) b000 b003
+range (] b000 b003
+range () b000 b003
+range [] b010 b012
+range [) b010 b012
+range (] b010 b012
+range () b010 b012
+range [] b030 b020
+range [) b030 b020
+range (] b030 b020
+range () b030 b020
+range [] b000 b060
+range [) b059 b000
+range [] A b000
+range [] b059 z
+range [] c z
+walk
+step
+step
+step
+step

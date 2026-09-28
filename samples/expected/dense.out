@@ -1,0 +1,50 @@
+set d1 d1 size=12 changed=0 walk=idle
+get d1 = d1
+set d1 V1 size=12 changed=1 walk=idle
+set d1 V1 size=12 changed=0 walk=idle
+set d1 V2 size=12 changed=1 walk=idle
+get d1 = V2
+del d4 size=11 changed=1 walk=idle
+del d4 size=11 changed=0 walk=idle
+set d4 V4 size=12 changed=1 walk=idle
+get d4 = V4
+range [] d1 d12 count=4
+  d1 V2
+  d10 d10
+  d11 d11
+  d12 d12
+range [) d2 d6 count=4
+  d2 d2
+  d3 d3
+  d4 V4
+  d5 d5
+range (] d2 d6 count=4
+  d3 d3
+  d4 V4
+  d5 d5
+  d6 d6
+range () d2 d6 count=3
+  d3 d3
+  d4 V4
+  d5 d5
+range [] d6 d2 count=0
+get d99 = -
+walk size=12
+step d1 V2
+step d10 d10
+step d11 d11
+step d12 d12
+step d2 d2
+step d3 d3
+step d4 V4
+step d5 d5
+step d6 d6
+step d7 d7
+step d8 d8
+step d9 d9
+step end
+error E_NO_WALK
+walk size=12
+step d1 V2
+step d10 d10
+step d11 d11

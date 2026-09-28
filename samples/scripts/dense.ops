@@ -1,0 +1,36 @@
+# 密集短键：同值覆盖、改值覆盖、删除、查缺失、一次完整升序遍历
+set d1 d1
+get d1
+set d1 V1
+set d1 V1
+set d1 V2
+get d1
+del d4
+del d4
+set d4 V4
+get d4
+range [] d1 d12
+range [) d2 d6
+range (] d2 d6
+range () d2 d6
+range [] d6 d2
+get d99
+walk
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+walk
+step
+step
+step
